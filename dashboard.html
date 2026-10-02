@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SITTA UT - Dashboard</title>
+  
+
+  <header id="main-header"></header>
+
+  <!-- Banner Parallax (Sesuai Referensi W3Schools) -->
+  <div class="parallax-bg">
+    <div>
+      <h1 id="greeting-text">Selamat Datang</h1>
+      <p>Sistem Informasi Tatalaksana Bahan Ajar Universitas Terbuka</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h2 class="card-title">Profil Pengguna</h2>
+      <div id="user-info">
+        <!-- Informasi pengguna akan diisi secara dinamis oleh JavaScript -->
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 class="card-title">Akses Cepat</h2>
+      <p>Pilih menu berikut untuk mengelola data sistem:</p>
+      <div style="margin-top: 15px;">
+        <a href="tracking.html" class="btn" style="text-decoration: none; display: inline-block; margin-right: 10px;">Lacak Pengiriman DO</a>
+        <a href="stock.html" class="btn" style="text-decoration: none; display: inline-block;">Kelola Stok Bahan Ajar</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

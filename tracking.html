@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SITTA UT - Tracking DO</title>
+
+
+  <header id="main-header"></header>
+
+  <div class="container">
+    <div class="card">
+      <h2 class="card-title">Pencarian Tracking Delivery Order (DO)</h2>
+      <form id="form-search-do" style="display: flex; gap: 10px;">
+        <input type="text" id="input-no-do" placeholder="Masukkan Nomor DO (Contoh: 2023001234)" style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" required>
+        <button type="submit" class="btn">Cari</button>
+      </form>
+    </div>
+
+    <!-- Hasil Tracking (Hidden secara default) -->
+    <div id="hasil-tracking" class="card" style="display: none;">
+      <h2 class="card-title">Detail Pengiriman DO: <span id="track-no-do"></span></h2>
+      <div style="display: flex; justify-content: space-between; flex-wrap: wrap; margin-bottom: 20px;">
+        <div>
+          <p><strong>Nama Penerima:</strong> <span id="track-nama"></span></p>
+          <p><strong>Ekspedisi:</strong> <span id="track-ekspedisi"></span></p>
+          <p><strong>Tanggal Kirim:</strong> <span id="track-tanggal"></span></p>
+        </div>
+        <div>
+          <p><strong>Kode Paket:</strong> <span id="track-paket"></span></p>
+          <p><strong>Total Biaya:</strong> <span id="track-total"></span></p>
+          <p><strong>Status:</strong> <span id="track-status" style="font-weight: bold; color: green;"></span></p>
+        </div>
+      </div>
+
+      <h3 style="margin-bottom: 15px; color: #003366;">Riwayat Perjalanan Paket</h3>
+      <ul id="track-timeline" class="timeline">
+        <!-- Item timeline diisi oleh JS -->
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SITTA UT - Login</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="login-body">
+
+  <div class="card login-box">
+    <h2 style="text-align: center; color: #003366; margin-bottom: 10px;">SITTA UT</h2>
+    <p style="text-align: center; margin-bottom: 20px; color: #555;">Sistem Informasi Tatalaksana Bahan Ajar</p>
+
+    <!-- Alert Notifikasi Error -->
+    <div id="alert-error" class="alert">Email atau password salah! Silakan coba lagi.</div>
+
+    <!-- Form Login Utama -->
+    <form id="form-login">
+      <div class="form-group">
+        <label for="email">Email Pengguna</label>
+        <input type="email" id="email" placeholder="Contoh: rina@ut.ac.id" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Masukkan password" required>
+      </div>
+
+      <button type="submit" class="btn btn-block">Masuk</button>
+    </form>
+
+    <!-- Link Akses Modal -->
+    <div style="margin-top: 20px; text-align: center; font-size: 13px;">
+      <button type="button" class="btn-link" id="btn-lupa-modal">Lupa Password?</button> 
+      <span style="color: #ccc;">|</span> 
+      <button type="button" class="btn-link" id="btn-daftar-modal">Daftar Akun Baru</button>
+    </div>
+  </div>
+
+  <!-- Modal Box: Lupa Password -->
+  <div id="modal-lupa" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-lupa">&times;</span>
+      <h3 style="color: #003366; margin-bottom: 10px;">Lupa Password</h3>
+      <p style="font-size: 13px; margin-bottom: 15px; color: #666;">Masukkan email terdaftar Anda untuk menerima tautan pemulihan password.</p>
+      <form id="form-lupa">
+        <div class="form-group">
+          <label for="email-lupa">Email</label>
+          <input type="email" id="email-lupa" placeholder="Masukkan email Anda" required>
+        </div>
+        <button type="submit" class="btn btn-block">Kirim Pemulihan</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Box: Pendaftaran Akun -->
+  <div id="modal-daftar" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-daftar">&times;</span>
+      <h3 style="color: #003366; margin-bottom: 15px;">Pendaftaran Akun Baru</h3>
+      <form id="form-daftar">
+        <div class="form-group">
+          <label for="nama-daftar">Nama Lengkap</label>
+          <input type="text" id="nama-daftar" placeholder="Contoh: Ahmad Subagja" required>
+        </div>
+        <div class="form-group">
+          <label for="email-daftar">Email</label>
+          <input type="email" id="email-daftar" placeholder="Contoh: ahmad@ut.ac.id" required>
+        </div>
+        <div class="form-group">
+          <label for="password-daftar">Password Baru</label>
+          <input type="password" id="password-daftar" placeholder="Buat password" required>
+        </div>
+        <button type="submit" class="btn btn-block">Daftar Sekarang</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Script JS (Urutan Pemanggilan Penting: data.js dulu, baru script.js) -->
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
