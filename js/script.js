@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function () {
           jenisBarang: document.getElementById('add-jenis').value,
           edisi: document.getElementById('add-edisi').value,
           stok: parseInt(document.getElementById('add-stok').value),
-          cover: 'assets/pengantar_komunikasi.jpg' // Default cover untuk data baru
+          cover: 'assets/images.jpeg' // Default cover untuk data baru
         };
 
         dataBahanAjar.push(newItem);
