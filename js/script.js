@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <td><strong>${item.stok}</strong></td>
           <td style="text-align: center;">
             <button type="button" class="btn-detail" onclick="lihatDetail(${index})" title="Lihat Detail" style="background: none; border: none; cursor: pointer; font-size: 16px;">
-              🔍➕
+              👁️
             </button>
           </td>
         `;
@@ -261,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-  }
+  
 
 
   // ==========================================
