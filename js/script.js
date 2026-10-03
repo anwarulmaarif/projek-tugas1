@@ -9,6 +9,76 @@ document.addEventListener('DOMContentLoaded', function () {
       .then(data => {
         headerContainer.innerHTML = data;
 
+        // ==========================================
+        // Tombol Hamburger Mobile
+        // ==========================================
+        const menuToggle = document.getElementById('menu-toggle');
+        const mainNav = document.getElementById('main-nav');
+
+        if (menuToggle && mainNav) {
+            menuToggle.addEventListener('click', function () {
+                mainNav.classList.toggle('mobile-open');
+
+                const isOpen = mainNav.classList.contains('mobile-open');
+
+                menuToggle.textContent = isOpen ? '✕' : '☰';
+                menuToggle.setAttribute(
+                    'aria-label',
+                    isOpen ? 'Tutup menu' : 'Buka menu'
+                );
+            });
+        }
+
+
+        // ==========================================
+        // DROPDOWN LAPORAN - MOBILE
+        // ==========================================
+        const laporanMenu = document.querySelector('.dropdown');
+
+        if (laporanMenu) {
+            const laporanLink = laporanMenu.querySelector(':scope > a');
+
+            if (laporanLink) {
+                laporanLink.addEventListener('click', function (event) {
+                    // Hanya gunakan perilaku ini pada layar mobile
+                    if (window.innerWidth <= 768) {
+                        event.preventDefault();
+                        laporanMenu.classList.toggle('open');
+                    }
+                });
+            }
+        }
+
+
+        // ==========================================
+        // TUTUP MENU SETELAH MEMILIH LINK
+        // ==========================================
+        if (mainNav) {
+            const navLinks = mainNav.querySelectorAll('a');
+
+            navLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+
+                    // Jangan tutup menu ketika klik Laporan
+                    // karena Laporan adalah dropdown
+                    if (
+                        window.innerWidth <= 768 &&
+                        !link.parentElement.classList.contains('dropdown')
+                    ) {
+                        mainNav.classList.remove('mobile-open');
+
+                        if (menuToggle) {
+                            menuToggle.textContent = '☰';
+                            menuToggle.setAttribute(
+                                'aria-label',
+                                'Buka menu'
+                            );
+                        }
+                    }
+                });
+            });
+        }
+
         // Tandai menu yang aktif sesuai halaman saat ini
         const currentPage = window.location.pathname.split('/').pop() || 'dashboard.html';
         if (currentPage === 'dashboard.html') {

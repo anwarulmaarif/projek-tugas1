@@ -1,12 +1,8 @@
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=1.0">
 </head>
 <body>
 <div class="nav-container">
-  <!---
-  <a href="dashboard.html" id="logo">
-    <img src="assets/logo.png" alt="Logo Universitas Terbuka" width="50"> SITTA UT
-  </a>
-  -->
+  
 <div class="header-brand">
     <img src="assets/logo.jpg" alt="Logo Universitas Terbuka">
 
@@ -14,20 +10,44 @@
         <h1>SITTA UT</h1>
     </div>
 </div>
-  <nav>
-    <ul>
-      <li><a href="dashboard.html" id="nav-dashboard">Dashboard</a></li>
-      <li><a href="stock.html" id="nav-stock">Informasi Bahan Ajar</a></li>
-      <li><a href="tracking.html" id="nav-tracking">Tracking Pengiriman</a></li>
-      <li class="dropdown">
-        <a href="#">Laporan &#9662;</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Monitoring Progress DO Bahan Ajar</a></li>
-          <li><a href="#">Rekap Bahan Ajar</a></li>
+  <!-- Tombol hamburger untuk HP -->
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Buka menu">
+        ☰
+    </button>
+
+    <nav id="main-nav">
+        <ul>
+            <li>
+                <a href="dashboard.html" id="nav-dashboard">Dashboard</a>
+            </li>
+
+            <li>
+                <a href="stock.html" id="nav-stock">Informasi Bahan Ajar</a>
+            </li>
+
+            <li>
+                <a href="tracking.html" id="nav-tracking">Tracking Pengiriman</a>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" id="nav-laporan">Laporan &#9662;</a>
+
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="#">Monitoring Progress DO Bahan Ajar</a>
+                    </li>
+                    <li>
+                        <a href="#">Rekap Bahan Ajar</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Histori Transaksi Bahan Ajar</a>
+            </li>
+
+            <li>
+                <a href="#" id="btn-logout">Logout</a>
+            </li>
         </ul>
-      </li>
-      <li><a href="#">Histori Transaksi Bahan Ajar</a></li>
-      <li><a href="#" id="btn-logout">Logout</a></li>
-    </ul>
-  </nav>
-</div>
+    </nav>

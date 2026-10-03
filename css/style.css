@@ -286,8 +286,14 @@ nav ul li a.active {
 }
 
 /* Styling Dropdown Menu Laporan */
-nav ul li.dropdown:hover .dropdown-menu {
-  display: block;
+@media (max-width: 768px) {
+    nav ul li.dropdown:hover .dropdown-menu {
+        display: none;
+    }
+
+    nav ul li.dropdown.open .dropdown-menu {
+        display: block;
+    }
 }
 
 .dropdown-menu {
@@ -331,6 +337,7 @@ nav ul li.dropdown:hover .dropdown-menu {
     border-radius: 8px;
     border: white 2px solid;
     margin: 5px;
+    background-color: white;
 }
 
 .header-text {
@@ -347,4 +354,144 @@ nav ul li.dropdown:hover .dropdown-menu {
 .header-text p {
     margin: 2px 0 0;
     line-height: 1.2;
+}
+
+/* ==========================================
+   RESPONSIVE HEADER
+   ========================================== */
+
+/* Tombol hamburger - default disembunyikan */
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================
+   MODE MOBILE
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 0;
+    }
+
+    .nav-container {
+        position: relative;
+        flex-wrap: wrap;
+        padding: 8px 15px;
+    }
+
+    /* Logo dan nama aplikasi */
+    .header-brand {
+        gap: 10px;
+    }
+
+    .header-brand img {
+        width: 38px;
+        height: 38px;
+        margin: 3px;
+    }
+
+    .header-text h1 {
+        font-size: 20px;
+    }
+
+    /* Tampilkan hamburger */
+    .menu-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
+    /* Menu disembunyikan secara default */
+    nav {
+        display: none;
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    /* Menu ketika dibuka */
+    nav.mobile-open {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 0;
+    }
+
+    nav ul li a {
+        width: 100%;
+        padding: 13px 10px;
+        font-size: 14px;
+        white-space: normal;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Dropdown di mobile */
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        min-width: 0;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #00264d;
+    }
+
+    .dropdown-menu li a {
+        color: white;
+        padding-left: 25px;
+        border-bottom: none;
+    }
+
+    .dropdown-menu li a:hover {
+        background-color: #0055a5;
+        color: white;
+    }
+
+    /* Jangan gunakan hover dropdown di HP */
+    nav ul li.dropdown:hover .dropdown-menu {
+        display: none;
+    }
+
+    /* Dropdown muncul ketika parent diberi class open */
+    @media (max-width: 768px) {
+
+    nav ul li.dropdown > a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav ul li.dropdown.open > a {
+        background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    nav ul li.dropdown.open > a::after {
+        content: "▲";
+        font-size: 10px;
+    }
+
+    nav ul li.dropdown:not(.open) > a::after {
+        content: "▼";
+        font-size: 10px;
+    }
+
+}
 }
