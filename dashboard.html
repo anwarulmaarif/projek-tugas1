@@ -1,40 +1,276 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SITTA UT - Dashboard</title>
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <header id="main-header"></header>
+    <title>SITTA UT - Dashboard</title>
 
-  <!-- Banner Parallax (Sesuai Referensi W3Schools) -->
-  <div class="parallax-bg">
-    <div>
-      <h1 id="greeting-text">Selamat Datang</h1>
-      <p>Sistem Informasi Tatalaksana Bahan Ajar Universitas Terbuka</p>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         HEADER
+         ========================================== -->
+
+    <header id="main-header"></header>
+
+
+    <!-- ==========================================
+         GREETING / PARALLAX
+         ========================================== -->
+
+    <div class="parallax-bg">
+
+        <div class="greeting-content">
+
+            <h1 id="greeting-text">
+                Selamat Datang
+            </h1>
+
+            <p>
+                Sistem Informasi Tatalaksana Bahan Ajar
+                Universitas Terbuka
+            </p>
+
+        </div>
+
     </div>
-  </div>
 
-  <div class="container">
-    <div class="card">
-      <h2 class="card-title">Profil Pengguna</h2>
-      <div id="user-info">
-        <!-- Informasi pengguna akan diisi secara dinamis oleh JavaScript -->
-      </div>
-    </div>
 
-    <div class="card">
-      <h2 class="card-title">Akses Cepat</h2>
-      <p>Pilih menu berikut untuk mengelola data sistem:</p>
-      <div style="margin-top: 15px;">
-        <a href="tracking.html" class="btn" style="text-decoration: none; display: inline-block; margin-right: 10px;">Lacak Pengiriman DO</a>
-        <a href="stock.html" class="btn" style="text-decoration: none; display: inline-block;">Kelola Stok Bahan Ajar</a>
-      </div>
-    </div>
-  </div>
+    <!-- ==========================================
+         KONTEN DASHBOARD
+         ========================================== -->
 
-  <script src="js/data.js?v=1.0"></script>
-  <script src="js/script.js?v=1.0"></script>
+    <main class="container">
+
+
+        <!-- ======================================
+             1. PROFIL PENGGUNA
+             ====================================== -->
+
+        <section class="card">
+
+            <h2 class="card-title">
+                Profil Pengguna
+            </h2>
+
+            <div id="user-info">
+                <!-- Diisi otomatis oleh JavaScript -->
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             2. AKSES CEPAT
+             ====================================== -->
+
+        <section class="card">
+
+            <h2 class="card-title">
+                Akses Cepat
+            </h2>
+
+            <p>
+                Pilih menu berikut untuk mengelola
+                data sistem:
+            </p>
+
+            <div class="quick-access">
+
+                <a
+                    href="tracking.html"
+                    class="btn quick-access-btn"
+                >
+                    Lacak Pengiriman DO
+                </a>
+
+                <a
+                    href="stock.html"
+                    class="btn quick-access-btn"
+                >
+                    Kelola Stok Bahan Ajar
+                </a>
+
+                <a
+                    href="#ringkasan-data"
+                    class="btn quick-access-btn"
+                >
+                    Lihat Ringkasan Data
+                </a>
+
+                <a
+                    href="#aktivitas-terbaru"
+                    class="btn quick-access-btn"
+                >
+                    Aktivitas Terbaru
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             3. RINGKASAN DATA
+             ====================================== -->
+
+        <section
+            class="card"
+            id="ringkasan-data"
+        >
+
+            <h2 class="card-title">
+                Ringkasan Bahan Ajar
+            </h2>
+
+            <div class="summary-grid">
+
+
+                <!-- Total Bahan Ajar -->
+
+                <div class="summary-item">
+
+                    <div
+                        class="summary-number"
+                        id="total-bahan-ajar"
+                    >
+                        0
+                    </div>
+
+                    <div class="summary-label">
+                        Jenis Bahan Ajar
+                    </div>
+
+                </div>
+
+
+                <!-- Total Stok -->
+
+                <div class="summary-item">
+
+                    <div
+                        class="summary-number"
+                        id="total-stok"
+                    >
+                        0
+                    </div>
+
+                    <div class="summary-label">
+                        Total Stok
+                    </div>
+
+                </div>
+
+
+                <!-- DO Diproses -->
+
+                <div class="summary-item">
+
+                    <div
+                        class="summary-number"
+                        id="total-do-proses"
+                    >
+                        0
+                    </div>
+
+                    <div class="summary-label">
+                        DO Diproses
+                    </div>
+
+                </div>
+
+
+                <!-- DO Selesai -->
+
+                <div class="summary-item">
+
+                    <div
+                        class="summary-number"
+                        id="total-do-selesai"
+                    >
+                        0
+                    </div>
+
+                    <div class="summary-label">
+                        DO Selesai
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             4. AKTIVITAS TERBARU
+             ====================================== -->
+
+        <section
+            class="card"
+            id="aktivitas-terbaru"
+        >
+
+            <h2 class="card-title">
+                Aktivitas Terbaru
+            </h2>
+
+            <div id="recent-activities">
+
+                <!-- Diisi otomatis oleh JavaScript -->
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             5. INFORMASI SISTEM
+             ====================================== -->
+
+        <section class="card system-info">
+
+            <h2 class="card-title">
+                Informasi Sistem
+            </h2>
+
+            <div class="system-info-content">
+
+                <h3>
+                    Sistem Informasi Tatalaksana Bahan Ajar
+                </h3>
+
+                <p>
+                    Sistem ini digunakan untuk membantu
+                    pengelolaan bahan ajar, pemantauan
+                    stok, serta pelacakan pengiriman
+                    bahan ajar Universitas Terbuka.
+                </p>
+
+                <p class="system-version">
+                    SITTA UT • Dashboard
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>

@@ -1,328 +1,50 @@
-/* Reset & Styling Dasar */
+/* =========================================================
+   RESET & STYLING DASAR
+   ========================================================= */
+
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background-color: #f4f6f9;
-  color: #333;
+    background-color: #f4f6f9;
+    color: #333;
 }
 
-/* Header & Navigasi */
+
+/* =========================================================
+   HEADER & NAVIGASI
+   ========================================================= */
+
 header {
-  background-color: #003366; /* Warna khas UT */
-  color: white;
-  padding: 15px 20px;
+    background-color: #003366;
+    color: white;
+    padding: 0 20px;
 }
 
 .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 30px;
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-}
 
-nav ul li {
-  margin-left: 20px;
-}
+/* =========================================================
+   LOGO / BRAND HEADER
+   ========================================================= */
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 12px;
-  border-radius: 4px;
-}
-
-nav ul li a:hover, nav ul li a.active {
-  background-color: #0055a5;
-}
-
-/* Parallax Banner (Referensi W3Schools) */
-.parallax-bg {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1200');
-  height: 250px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-}
-
-/* Container Utama */
-.container {
-  max-width: 1100px;
-  margin: 30px auto;
-  padding: 0 20px;
-}
-
-/* Card Component (Referensi GeeksforGeeks) */
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 25px;
-}
-
-.card-title {
-  margin-bottom: 15px;
-  color: #003366;
-  border-bottom: 2px solid #003366;
-  padding-bottom: 8px;
-}
-
-/* Form & Input Styling */
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.form-group input, .form-group select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.btn {
-  background-color: #003366;
-  color: white;
-  padding: 10px 18px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.btn:hover {
-  background-color: #0055a5;
-}
-
-.btn-block {
-  width: 100%;
-}
-
-.btn-link {
-  background: none;
-  border: none;
-  color: #003366;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-/* Login Page Styling */
-.login-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #e9ecef;
-}
-
-.login-box {
-  width: 100%;
-  max-width: 400px;
-}
-
-/* Modal Styling (Referensi W3Schools Modal) */
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 100; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  background-color: rgba(0, 0, 0, 0.5); 
-}
-
-.modal-content {
-  background-color: white;
-  margin: 10% auto; 
-  padding: 20px;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 450px;
-  position: relative;
-}
-
-.close {
-  position: absolute;
-  right: 15px;
-  top: 10px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* Tabel Styling */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-}
-
-table th, table td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: left;
-}
-
-table th {
-  background-color: #003366;
-  color: white;
-}
-
-table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-/* Timeline Tracking */
-.timeline {
-  list-style: none;
-  padding: 10px 0;
-}
-
-.timeline-item {
-  position: relative;
-  padding-left: 25px;
-  margin-bottom: 15px;
-  border-left: 2px solid #003366;
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -6px;
-  top: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #003366;
-}
-
-.alert {
-  padding: 10px;
-  background-color: #f8d7da;
-  color: #721c24;
-  border-radius: 4px;
-  margin-bottom: 15px;
-  display: none;
-}
-
-/* Header & Navigasi */
-header {
-  background-color: #003366; /* Warna khas UT */
-  color: white;
-  padding: 0 20px;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 100%; /* Hapus batasan 1100px agar penuh */
-  padding: 0 30px; /* Jarak aman di sisi kiri dan kanan */
-  box-sizing: border-box;
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  position: relative;
-}
-
-nav ul li a {
-  display: flex;
-  align-items: center;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-  padding: 16px 20px; /* Padding menu lebih leluasa */
-  white-space: nowrap; /* Mencegah teks terpotong turun ke baris baru */
-  transition: background-color 0.3s;
-}
-
-nav ul li a:hover, 
-nav ul li a.active {
-  background-color: #0055a5;
-}
-
-/* Styling Dropdown Menu Laporan */
-@media (max-width: 768px) {
-    nav ul li.dropdown:hover .dropdown-menu {
-        display: none;
-    }
-
-    nav ul li.dropdown.open .dropdown-menu {
-        display: block;
-    }
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #ffffff;
-  min-width: 240px;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  border-radius: 0 0 4px 4px;
-  z-index: 1000;
-  list-style: none;
-  padding: 0;
-}
-
-.dropdown-menu li a {
-  color: #333333;
-  padding: 12px 16px;
-  font-weight: normal;
-  font-size: 14px;
-  border-bottom: 1px solid #eeeeee;
-}
-
-.dropdown-menu li a:hover {
-  background-color: #f1f1f1;
-  color: #003366;
-}
-/* bagian header logo */
 .header-brand {
     display: flex !important;
     flex-direction: row !important;
@@ -335,7 +57,7 @@ nav ul li a.active {
     object-fit: contain;
     flex-shrink: 0;
     border-radius: 8px;
-    border: white 2px solid;
+    border: 2px solid white;
     margin: 5px;
     background-color: white;
 }
@@ -356,11 +78,86 @@ nav ul li a.active {
     line-height: 1.2;
 }
 
-/* ==========================================
-   RESPONSIVE HEADER
-   ========================================== */
 
-/* Tombol hamburger - default disembunyikan */
+/* =========================================================
+   NAVIGASI DESKTOP
+   ========================================================= */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 16px 20px;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #0055a5;
+}
+
+
+/* =========================================================
+   DROPDOWN MENU LAPORAN
+   ========================================================= */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 240px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 4px 4px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown-menu li a {
+    color: #333333;
+    padding: 12px 16px;
+    font-weight: normal;
+    font-size: 14px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f1f1f1;
+    color: #003366;
+}
+
+
+/* =========================================================
+   DROPDOWN DESKTOP
+   ========================================================= */
+
+/* Di desktop, submenu bisa muncul ketika mouse diarahkan */
+nav ul li.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* =========================================================
+   TOMBOL HAMBURGER
+   ========================================================= */
+
 .menu-toggle {
     display: none;
     width: 44px;
@@ -375,11 +172,250 @@ nav ul li a.active {
     justify-content: center;
 }
 
-/* ==========================================
+
+/* =========================================================
+   PARALLAX BANNER
+   ========================================================= */
+
+.parallax-bg {
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+        ),
+        url('../assets/greeting.jpeg');
+
+    height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+}
+
+
+/* =========================================================
+   CONTAINER UTAMA
+   ========================================================= */
+
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+
+.card-title {
+    margin-bottom: 15px;
+    color: #003366;
+    border-bottom: 2px solid #003366;
+    padding-bottom: 8px;
+}
+
+
+/* =========================================================
+   FORM & INPUT
+   ========================================================= */
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.btn {
+    background-color: #003366;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: #0055a5;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: #003366;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   LOGIN PAGE
+   ========================================================= */
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e9ecef;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 400px;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   TABEL
+   ========================================================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #003366;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+/* =========================================================
+   TIMELINE TRACKING
+   ========================================================= */
+
+.timeline {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    border-left: 2px solid #003366;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #003366;
+}
+
+
+/* =========================================================
+   ALERT
+   ========================================================= */
+
+.alert {
+    padding: 10px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: none;
+}
+
+
+/* =========================================================
    MODE MOBILE
-   ========================================== */
+   ========================================================= */
 
 @media (max-width: 768px) {
+
+    /* -----------------------------------------
+       HEADER
+       ----------------------------------------- */
 
     header {
         padding: 0;
@@ -391,7 +427,11 @@ nav ul li a.active {
         padding: 8px 15px;
     }
 
-    /* Logo dan nama aplikasi */
+
+    /* -----------------------------------------
+       LOGO
+       ----------------------------------------- */
+
     .header-brand {
         gap: 10px;
     }
@@ -406,20 +446,27 @@ nav ul li a.active {
         font-size: 20px;
     }
 
-    /* Tampilkan hamburger */
+
+    /* -----------------------------------------
+       HAMBURGER
+       ----------------------------------------- */
+
     .menu-toggle {
         display: flex;
         margin-left: auto;
     }
 
-    /* Menu disembunyikan secara default */
+
+    /* -----------------------------------------
+       NAVIGASI MOBILE
+       ----------------------------------------- */
+
     nav {
         display: none;
         width: 100%;
         flex-basis: 100%;
     }
 
-    /* Menu ketika dibuka */
     nav.mobile-open {
         display: block;
     }
@@ -444,7 +491,11 @@ nav ul li a.active {
         border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    /* Dropdown di mobile */
+
+    /* -----------------------------------------
+       DROPDOWN MOBILE
+       ----------------------------------------- */
+
     .dropdown-menu {
         position: static;
         width: 100%;
@@ -465,13 +516,28 @@ nav ul li a.active {
         color: white;
     }
 
-    /* Jangan gunakan hover dropdown di HP */
+
+    /* -----------------------------------------
+       NONAKTIFKAN HOVER DROPDOWN DI HP
+       ----------------------------------------- */
+
     nav ul li.dropdown:hover .dropdown-menu {
         display: none;
     }
 
-    /* Dropdown muncul ketika parent diberi class open */
-    @media (max-width: 768px) {
+
+    /* -----------------------------------------
+       DROPDOWN DIBUKA DENGAN CLASS .open
+       ----------------------------------------- */
+
+    nav ul li.dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+
+    /* -----------------------------------------
+       PANAH DROPDOWN
+       ----------------------------------------- */
 
     nav ul li.dropdown > a {
         display: flex;
@@ -492,6 +558,594 @@ nav ul li a.active {
         content: "▼";
         font-size: 10px;
     }
+}
+
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
+
+
+/* -----------------------------------------
+   GREETING
+   ----------------------------------------- */
+
+.greeting-content {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.greeting-content h1 {
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+.greeting-content p {
+    font-size: 16px;
+}
+
+
+/* -----------------------------------------
+   AKSES CEPAT
+   ----------------------------------------- */
+
+.quick-access {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.quick-access-btn {
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+/* -----------------------------------------
+   RINGKASAN DATA
+   ----------------------------------------- */
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.summary-item {
+    background-color: #f4f6f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.summary-number {
+    color: #003366;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.summary-label {
+    color: #555;
+    font-size: 13px;
+}
+
+
+/* -----------------------------------------
+   AKTIVITAS TERBARU
+   ----------------------------------------- */
+
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-icon {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    border-radius: 50%;
+    background-color: #003366;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+}
+
+.activity-content {
+    flex: 1;
+}
+
+.activity-title {
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 4px;
+}
+
+.activity-description {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.activity-date {
+    font-size: 12px;
+    color: #888;
+    margin-top: 4px;
+}
+
+
+/* -----------------------------------------
+   INFORMASI SISTEM
+   ----------------------------------------- */
+
+.system-info-content {
+    line-height: 1.6;
+}
+
+.system-info-content h3 {
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.system-info-content p {
+    margin-bottom: 10px;
+}
+
+.system-version {
+    font-size: 12px;
+    color: #888;
+}
+
+
+/* =========================================================
+   DASHBOARD MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .greeting-content h1 {
+        font-size: 26px;
+    }
+
+    .greeting-content p {
+        font-size: 14px;
+    }
+
+
+    /* Akses cepat menjadi vertikal */
+
+    .quick-access {
+        flex-direction: column;
+    }
+
+    .quick-access-btn {
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+
+
+    /* Ringkasan menjadi 2 kolom */
+
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .summary-item {
+        padding: 15px 8px;
+    }
+
+    .summary-number {
+        font-size: 25px;
+    }
+
+
+    /* Aktivitas */
+
+    .activity-item {
+        gap: 10px;
+    }
 
 }
+
+/* =========================================================
+   INFORMASI BAHAN AJAR
+   ========================================================= */
+
+
+/* -----------------------------------------
+   JUDUL HALAMAN
+   ----------------------------------------- */
+
+.page-heading {
+    margin-bottom: 20px;
+}
+
+.page-heading h1 {
+    color: #003366;
+    font-size: 26px;
+    margin-bottom: 6px;
+}
+
+.page-heading p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* -----------------------------------------
+   FORM TAMBAH BAHAN AJAR
+   ----------------------------------------- */
+
+.stock-form-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+.stock-form-full {
+    grid-column: 1 / -1;
+}
+
+.stock-submit {
+    margin-top: 5px;
+}
+
+
+/* -----------------------------------------
+   RINGKASAN STOK
+   ----------------------------------------- */
+
+.stock-summary {
+    display: grid;
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.stock-summary-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.1);
+
+    border-left: 4px solid #003366;
+}
+
+.stock-summary-number {
+    display: block;
+
+    color: #003366;
+    font-size: 30px;
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+.stock-summary-label {
+    display: block;
+
+    color: #666;
+    font-size: 13px;
+}
+
+
+/* -----------------------------------------
+   TABEL DESKTOP
+   ----------------------------------------- */
+
+.stock-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.stock-table-wrapper table {
+    min-width: 850px;
+}
+
+
+/* -----------------------------------------
+   KARTU MOBILE
+   ----------------------------------------- */
+
+.stock-card-list {
+    display: none;
+}
+
+.stock-card {
+    background-color: #fff;
+
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+
+    padding: 15px;
+    margin-bottom: 12px;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.stock-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+}
+
+.stock-card-title {
+    color: #003366;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    line-height: 1.3;
+}
+
+.stock-card-code {
+    color: #777;
+
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.stock-card-info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+
+    margin-bottom: 12px;
+}
+
+.stock-card-info-item {
+    background-color: #f7f8fa;
+
+    border-radius: 5px;
+
+    padding: 8px;
+}
+
+.stock-card-info-label {
+    display: block;
+
+    color: #777;
+    font-size: 11px;
+
+    margin-bottom: 3px;
+}
+
+.stock-card-info-value {
+    display: block;
+
+    color: #333;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.stock-card-stock {
+    color: #003366;
+    font-size: 18px;
+}
+
+.stock-card-action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.stock-detail-btn {
+    background-color: #003366;
+
+    color: white;
+
+    border: none;
+    border-radius: 4px;
+
+    padding: 8px 14px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+
+/* -----------------------------------------
+   MODAL DETAIL
+   ----------------------------------------- */
+
+.stock-detail-modal {
+    max-width: 500px;
+}
+
+.stock-detail-modal h3 {
+    color: #003366;
+    margin-bottom: 5px;
+}
+
+.detail-subtitle {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.detail-cover-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.detail-cover-wrapper img {
+    max-width: 100%;
+    max-height: 250px;
+
+    border-radius: 6px;
+
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+}
+
+.detail-close-btn {
+    margin-top: 15px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* -------------------------------------
+       CONTAINER
+       ------------------------------------- */
+
+    .stock-page {
+        margin-top: 20px;
+        padding: 0 15px;
+    }
+
+
+    /* -------------------------------------
+       JUDUL
+       ------------------------------------- */
+
+    .page-heading h1 {
+        font-size: 22px;
+    }
+
+
+    /* -------------------------------------
+       CARD
+       ------------------------------------- */
+
+    .stock-page .card {
+        padding: 18px;
+        margin-bottom: 18px;
+    }
+
+
+    /* -------------------------------------
+       FORM
+       ------------------------------------- */
+
+    .stock-form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .stock-form-full {
+        grid-column: auto;
+    }
+
+    .stock-submit {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+
+    /* -------------------------------------
+       RINGKASAN
+       ------------------------------------- */
+
+    .stock-summary {
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .stock-summary-item {
+        padding: 15px 8px;
+    }
+
+    .stock-summary-number {
+        font-size: 24px;
+    }
+
+
+    /* -------------------------------------
+       SEMBUNYIKAN TABEL
+       ------------------------------------- */
+
+    .stock-table-wrapper {
+        display: none;
+    }
+
+
+    /* -------------------------------------
+       TAMPILKAN KARTU
+       ------------------------------------- */
+
+    .stock-card-list {
+        display: block;
+    }
+
+
+    /* -------------------------------------
+       DETAIL CARD
+       ------------------------------------- */
+
+    .stock-card {
+        padding: 14px;
+    }
+
+
+    /* -------------------------------------
+       MODAL
+       ------------------------------------- */
+
+    .stock-detail-modal {
+        width: calc(100% - 30px);
+        max-height: 90vh;
+
+        margin: 5vh auto;
+
+        padding: 18px;
+
+        overflow-y: auto;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .detail-cover-wrapper img {
+        max-height: 220px;
+    }
+
 }

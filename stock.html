@@ -1,122 +1,443 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SITTA UT - Stok Bahan Ajar</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SITTA UT - Informasi Bahan Ajar</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         HEADER
+         ========================================== -->
+
+    <header id="main-header"></header>
 
 
-  <header id="main-header"></header>
+    <!-- ==========================================
+         KONTEN UTAMA
+         ========================================== -->
 
-  <div class="container">
-    <!-- Form Tambah Stok -->
-    <div class="card">
-      <h2 class="card-title">Tambah Data Bahan Ajar</h2>
-      <form id="form-tambah-stok" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
-        <div class="form-group">
-          <label>Kode Lokasi</label>
-          <input type="text" id="add-lokasi" placeholder="Contoh: 0TMP01" required>
+    <main class="container stock-page">
+
+
+        <!-- ======================================
+             JUDUL HALAMAN
+             ====================================== -->
+
+        <div class="page-heading">
+
+            <h1>
+                Informasi Bahan Ajar
+            </h1>
+
+            <p>
+                Kelola dan lihat informasi stok
+                bahan ajar.
+            </p>
+
         </div>
-        <div class="form-group">
-          <label>Kode Barang</label>
-          <input type="text" id="add-kode" placeholder="Contoh: EKMA4111" required>
+
+
+        <!-- ======================================
+             TAMBAH DATA
+             ====================================== -->
+
+        <section class="card">
+
+            <h2 class="card-title">
+                Tambah Data Bahan Ajar
+            </h2>
+
+            <form id="form-tambah-stok">
+
+                <div class="stock-form-grid">
+
+                    <div class="form-group">
+
+                        <label for="add-lokasi">
+                            Kode Lokasi
+                        </label>
+
+                        <input
+                            type="text"
+                            id="add-lokasi"
+                            placeholder="Contoh: 0TMP01"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="add-kode">
+                            Kode Barang
+                        </label>
+
+                        <input
+                            type="text"
+                            id="add-kode"
+                            placeholder="Contoh: EKMA4111"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group stock-form-full">
+
+                        <label for="add-nama">
+                            Nama Barang
+                        </label>
+
+                        <input
+                            type="text"
+                            id="add-nama"
+                            placeholder="Contoh: Pengantar Akuntansi"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="add-jenis">
+                            Jenis Barang
+                        </label>
+
+                        <input
+                            type="text"
+                            id="add-jenis"
+                            value="BMP"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="add-edisi">
+                            Edisi
+                        </label>
+
+                        <input
+                            type="text"
+                            id="add-edisi"
+                            placeholder="Contoh: 1"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="add-stok">
+                            Jumlah Stok
+                        </label>
+
+                        <input
+                            type="number"
+                            id="add-stok"
+                            placeholder="Contoh: 100"
+                            min="0"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn stock-submit"
+                >
+                    + Tambah Data
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ======================================
+             RINGKASAN STOK
+             ====================================== -->
+
+        <section class="stock-summary">
+
+            <div class="stock-summary-item">
+
+                <span
+                    class="stock-summary-number"
+                    id="stock-total-jenis"
+                >
+                    0
+                </span>
+
+                <span class="stock-summary-label">
+                    Jenis Bahan Ajar
+                </span>
+
+            </div>
+
+
+            <div class="stock-summary-item">
+
+                <span
+                    class="stock-summary-number"
+                    id="stock-total-stok"
+                >
+                    0
+                </span>
+
+                <span class="stock-summary-label">
+                    Total Stok
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================
+             DAFTAR BAHAN AJAR
+             ====================================== -->
+
+        <section class="card">
+
+            <h2 class="card-title">
+                Daftar Bahan Ajar
+            </h2>
+
+
+            <!-- ==============================
+                 TAMPILAN DESKTOP
+                 ============================== -->
+
+            <div class="stock-table-wrapper">
+
+                <table id="tabel-stok">
+
+                    <thead>
+
+                        <tr>
+                            <th>No</th>
+                            <th>Kode Lokasi</th>
+                            <th>Kode Barang</th>
+                            <th>Nama Barang</th>
+                            <th>Jenis</th>
+                            <th>Edisi</th>
+                            <th>Stok</th>
+                            <th>Aksi</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tbody-stok">
+
+                        <!--
+                            Data bahan ajar
+                            dimasukkan oleh JavaScript
+                        -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- ==============================
+                 TAMPILAN MOBILE
+                 ============================== -->
+
+            <div
+                id="stock-card-list"
+                class="stock-card-list"
+            >
+
+                <!--
+                    Data bahan ajar
+                    dimasukkan oleh JavaScript
+                -->
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ==========================================
+         MODAL DETAIL
+         ========================================== -->
+
+    <div
+        id="modal-detail"
+        class="modal"
+    >
+
+        <div class="modal-content stock-detail-modal">
+
+            <button
+                type="button"
+                class="close"
+                id="close-detail"
+                aria-label="Tutup"
+            >
+                &times;
+            </button>
+
+
+            <h3>
+                Detail Bahan Ajar
+            </h3>
+
+            <p class="detail-subtitle">
+                Informasi lengkap bahan ajar
+            </p>
+
+
+            <!-- Cover -->
+
+            <div class="detail-cover-wrapper">
+
+                <img
+                    id="detail-cover"
+                    src=""
+                    alt="Cover Bahan Ajar"
+                >
+
+            </div>
+
+
+            <!-- Informasi -->
+
+            <div class="form-group">
+
+                <label>
+                    Kode Lokasi
+                </label>
+
+                <input
+                    type="text"
+                    id="detail-lokasi"
+                    readonly
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Kode Barang
+                </label>
+
+                <input
+                    type="text"
+                    id="detail-kode"
+                    readonly
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Nama Barang
+                </label>
+
+                <input
+                    type="text"
+                    id="detail-nama"
+                    readonly
+                >
+
+            </div>
+
+
+            <div class="detail-grid">
+
+                <div class="form-group">
+
+                    <label>
+                        Jenis Barang
+                    </label>
+
+                    <input
+                        type="text"
+                        id="detail-jenis"
+                        readonly
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Edisi
+                    </label>
+
+                    <input
+                        type="text"
+                        id="detail-edisi"
+                        readonly
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Stok
+                </label>
+
+                <input
+                    type="text"
+                    id="detail-stok"
+                    readonly
+                >
+
+            </div>
+
+
+            <button
+                type="button"
+                class="btn btn-block detail-close-btn"
+                id="btn-tutup-detail"
+            >
+                Tutup
+            </button>
+
         </div>
-        <div class="form-group">
-          <label>Nama Barang</label>
-          <input type="text" id="add-nama" placeholder="Contoh: Pengantar Akuntansi" required>
-        </div>
-        <div class="form-group">
-          <label>Jenis Barang</label>
-          <input type="text" id="add-jenis" value="BMP" required>
-        </div>
-        <div class="form-group">
-          <label>Edisi</label>
-          <input type="text" id="add-edisi" placeholder="1" required>
-        </div>
-        <div class="form-group">
-          <label>Jumlah Stok</label>
-          <input type="number" id="add-stok" placeholder="100" required>
-        </div>
-        <div style="grid-column: 1 / -1;">
-          <button type="submit" class="btn">Tambah ke Tabel</button>
-        </div>
-      </form>
+
     </div>
 
-    <!-- Tabel Data Stok -->
-    <div class="card">
-      <h2 class="card-title">Daftar Stok Bahan Ajar</h2>
-      <div style="overflow-x: auto;">
-        <table id="tabel-stok">
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>Kode Lokasi</th>
-              <th>Kode Barang</th>
-              <th>Nama Barang</th>
-              <th>Jenis</th>
-              <th>Edisi</th>
-              <th>Stok</th>
-              <th>Aksi</th>
-            </tr>
-          </thead>
-          <tbody id="tbody-stok">
-            <!-- Data bahan ajar dimasukkan via JavaScript -->
-          </tbody>
-        </table>
-      </div>
-    </div>
 
-    <!-- Modal Detail Bahan Ajar -->
-    <div id="modal-detail" class="modal">
-    <div class="modal-content" style="max-width: 500px;">
-        <span class="close" id="close-detail">&times;</span>
-        <h3 style="color: #003366; margin-bottom: 5px;">Detail Bahan Ajar</h3>
-        <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Peragaan Data Bahan Ajar</p>
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
 
-        <!-- Gambar Cover -->
-        <div style="text-align: center; margin-bottom: 20px;">
-        <img id="detail-cover" src="" alt="Cover Bahan Ajar" style="max-width: 100%; max-height: 250px; border-radius: 6px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        </div>
+    <script src="js/data.js?v=1.1"></script>
+    <script src="js/script.js?v=1.1"></script>
 
-        <!-- Informasi Detail (Gaya Readonly Input) -->
-        <div class="form-group">
-        <label style="font-weight: bold; font-size: 13px; color: #444;">Kode Lokasi</label>
-        <input type="text" id="detail-lokasi" readonly style="background-color: #f5f5f5; border: 1px solid #ddd; cursor: default;">
-        </div>
-
-        <div class="form-group">
-        <label style="font-weight: bold; font-size: 13px; color: #444;">Kode Barang</label>
-        <input type="text" id="detail-kode" readonly style="background-color: #f5f5f5; border: 1px solid #ddd; cursor: default;">
-        </div>
-
-        <div class="form-group">
-        <label style="font-weight: bold; font-size: 13px; color: #444;">Nama Barang</label>
-        <input type="text" id="detail-nama" readonly style="background-color: #f5f5f5; border: 1px solid #ddd; cursor: default;">
-        </div>
-
-        <div class="row-detail" style="display: flex; gap: 10px;">
-        <div class="form-group" style="flex: 1;">
-            <label style="font-weight: bold; font-size: 13px; color: #444;">Jenis Barang</label>
-            <input type="text" id="detail-jenis" readonly style="background-color: #f5f5f5; border: 1px solid #ddd; cursor: default;">
-        </div>
-        <div class="form-group" style="flex: 1;">
-            <label style="font-weight: bold; font-size: 13px; color: #444;">Edisi</label>
-            <input type="text" id="detail-edisi" readonly style="background-color: #f5f5f5; border: 1px solid #ddd; cursor: default;">
-        </div>
-        <div class="form-group" style="flex: 1;">
-            <label style="font-weight: bold; font-size: 13px; color: #444;">Stok</label>
-            <input type="text" id="detail-stok" readonly style="background-color: #f5f5f5; border: 1px solid #ddd; cursor: default;">
-        </div>
-        </div>
-
-        <button type="button" class="btn btn-block" id="btn-tutup-detail" style="margin-top: 15px; background-color: #666;">Tutup</button>
-    </div>
-    </div>
-
-  </div>
-
-  <script src="js/data.js?v=1.0"></script>
-  <script src="js/script.js?v=1.0"></script>
 </body>
+
 </html>
